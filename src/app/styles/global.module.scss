@@ -1,0 +1,43 @@
+.header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 999;
+
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    height: 80px;
+  }
+
+  .navbar-toggler {
+    display: none;
+  }
+
+  .navbar-nav {
+    display: flex;
+    margin-left: auto;
+
+    list-style: none;
+  }
+
+  .navbar-collapse {
+    align-self: center;
+  }
+
+  .sr-only {
+    display: none;
+  }
+
+  .nav-item {
+    padding: 0 15px;
+  }
+
+  .nav-link {
+    color: #fff;
+    font-size: 20px;
+    font-weight: 700;
+    text-transform: uppercase;
+  }
+}
