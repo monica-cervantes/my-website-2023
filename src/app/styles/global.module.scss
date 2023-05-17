@@ -1,43 +1,17 @@
-.header {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  z-index: 999;
+@import  'variables.module.scss';
 
-  .navbar {
-    display: flex;
-    justify-content: space-between;
-    height: 80px;
-  }
+.container {
+  position: relative;
+  z-index: 5;
 
-  .navbar-toggler {
-    display: none;
-  }
+  padding: 0 15px;
+  margin: auto;
+  max-width: 1620px;
+  width: 100%;
 
-  .navbar-nav {
-    display: flex;
-    margin-left: auto;
-
-    list-style: none;
-  }
-
-  .navbar-collapse {
-    align-self: center;
-  }
-
-  .sr-only {
-    display: none;
-  }
-
-  .nav-item {
-    padding: 0 15px;
-  }
-
-  .nav-link {
-    color: #fff;
-    font-size: 20px;
-    font-weight: 700;
-    text-transform: uppercase;
+  &__sm {
+    @extend .container;
+    
+    max-width: 1320px;
   }
 }

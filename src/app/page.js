@@ -1,17 +1,16 @@
-import Image from 'next/image'
-import SectionBanner from './banner'
-import SectionWelcome from './welcome'
-import SectionTimeline from './timeline'
-import SectionSkills from './skills'
-import './styles/global.module.scss'
+'use-client'
+import Banner from './layout/banner'
+import Welcome from './layout/welcome'
+import Timeline from './layout/timeline'
+import Skills from './layout/skills'
 
 export default function Home() {
   return (
     <main>
-      <SectionBanner />
-      <SectionWelcome />
-      <SectionTimeline />
-      <SectionSkills />
+      <Banner />
+      <Welcome />
+      <Timeline />
+      <Skills />
     </main>
   )
 }

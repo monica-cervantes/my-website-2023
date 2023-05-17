@@ -1,35 +1,11 @@
 'use client'
-import { styled } from 'styled-components'
-import { siteColors, H3, P, Container } from './globalStyles'
-import Experience from './experience'
-import Rivan from './images/rivan.png'
-import Fullstack from './images/fullstack.png'
-import Shell from './images/shell-logo.png'
-import ClarkOutsourcing from './images/clark-outsourcing.png'
-
-const Timeline = styled.section`
-  background: ${props => props.tertiary || "#fff"};
-
-  position: relative;
-  z-index: 2;
-
-  padding-bottom: 120px;
-
-  &:before {
-    content: '';
-
-    position: absolute;
-    top: 35px;
-    left: 50%;
-
-    height: 95%;
-
-    border: 3px solid ${props => props.primary || "#fff"};
-    border-radius: 5px;
-    
-    transform: translateX(-50%);
-  }
-`;
+import styles from '../styles/home.module.scss'
+import globalStyles from '../styles/global.module.scss'
+import Experience from '../components/experience'
+import Rivan from '../images/rivan.png'
+import Fullstack from '../images/fullstack.png'
+import Shell from '../images/shell-logo.png'
+import ClarkOutsourcing from '../images/clark-outsourcing.png'
 
 const data = [
   {
@@ -74,10 +50,10 @@ const data = [
   }
 ];
 
-export default function SectionTimeline() {
+export default function Timeline() {
   return (
-    <Timeline primary={siteColors.primary} tertiary={siteColors.tertiary}>
-      <Container width={"1320px"}>
+    <div className={styles.timeline}>
+      <div className={globalStyles.container__sm}>
         <div className='row-custom'>
           {data.map(experience => 
             <Experience
@@ -90,7 +66,7 @@ export default function SectionTimeline() {
             />
           )}
         </div>
-      </Container>
-    </Timeline>
+      </div>
+    </div>
   )
 } 

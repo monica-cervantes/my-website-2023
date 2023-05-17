@@ -1,0 +1,30 @@
+@import 'global.module.scss';
+@import  'variables.module.scss';
+
+.footer {
+  background: $secondary;
+
+  &__container {
+    @extend .container__sm;
+
+    display: flex;
+    justify-content: space-between;
+    padding: 40px 0;
+    
+    color: #fff;
+    font-weight: 300;
+    letter-spacing: 2px;
+    
+    border-top: 1px solid $tertiary;
+  }
+
+  .copyright {
+    color: #fff;
+  }
+
+  .link {
+    margin: 0 6px;
+    
+    font-size: 20px;
+  }
+}

@@ -1,0 +1,285 @@
+@import 'global.module.scss';
+@import  'variables.module.scss';
+
+.banner {
+  position: relative;
+  
+  padding: 125px 0;
+
+  background: $secondary;
+
+  overflow: hidden;
+
+  &:before,
+  &:after {
+    position: absolute;
+  }
+  
+  &:before {
+    content: '';
+
+    left: 0px;
+    bottom: 0;
+    z-index: 2;
+
+    width: 470px;
+    height: 476px;
+
+    background: url('/images/banner-left.png') right top/cover no-repeat;
+  }
+
+  &:after { 
+    content: '';
+
+    right: -919px;
+    bottom: -190px;
+
+    width: 1495px;
+    height: 1145px;
+
+    background: url('/images/banner-right.png') left top/cover no-repeat;
+  }
+
+  &__container {
+    @extend .container__sm;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  svg {
+    position: absolute;
+    left: -988px;
+    top: -513px;
+  }
+
+  &__content_wrapper {
+    margin-left: 15px;
+    max-width: 620px;
+
+    text-align: center;
+  }
+}
+
+.welcome {
+  position: relative;
+  top: -90px;
+
+  padding: 30px 30px;
+  margin: auto;
+  max-width: 1320px;
+
+  text-align: center;
+
+  background: #fff;
+  box-shadow: 0px 2px 5px rgb(135 135 135 / 10%);
+}
+
+.timeline {
+  background: $tertiary;
+
+  position: relative;
+  z-index: 2;
+
+  padding-bottom: 120px;
+
+  &:before {
+    content: '';
+
+    position: absolute;
+    top: 35px;
+    left: 50%;
+
+    height: 95%;
+
+    border: 3px solid $primary;
+    border-radius: 5px;
+    
+    transform: translateX(-50%);
+  }
+
+  .column {
+    position: relative;
+
+    display: flex;
+    flex: 0 0 100%;
+    padding: 25px 20px;
+    margin-bottom: 150px;
+
+    text-align: center;
+
+    &:before {
+      content: '';
+
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      z-index: 2;
+
+      width: 23px;
+      height: 23px;
+
+      background-color: $primary;
+      border-radius: 50%;
+
+      transform: translate(-50%, -50%);
+    }
+
+    &:nth-child(odd) {
+      flex-direction: row-reverse;
+
+      .logo_holder {
+        justify-content: flex-end;
+        margin: 0 128px 0 10px;
+
+        img {
+          margin-left: 25px;
+          margin-right: 0;
+        }
+      }
+
+      .wrapper {
+        margin-right: auto;
+        margin-left: 30px;
+
+        text-align: left;
+      }
+
+      .job_logo {
+        justify-content: flex-end;
+      }
+
+      .job_details {
+        &:before {
+          right: auto;
+          left: 10px;
+        }
+      }
+
+      .job_heading {
+        justify-content: flex-start;
+      }
+    }
+
+    .job {
+      position: relative;
+
+      flex: 0 0 50%;
+    }
+
+    .job_details {
+      &:before {
+        right: 10px;
+
+        display: none;
+      }
+    }
+
+    .job_logo {
+      display: flex;
+      align-items: center;
+    }
+
+    .position {
+      color: $secondary;
+      font-size: 40px;
+      text-transform: uppercase;
+    }
+
+    .job_heading {
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+
+      color: $secondary;
+      font-size: 25px;
+      font-weight: 400;
+
+      span {
+        padding: 1px 0;
+        padding-left: 15px;
+        margin: 10px 0;
+        margin-left: 15px;
+
+        border-left: 1px solid $secondary;
+      }
+    }
+
+    .job_summary {
+      font-size: 22px;
+      letter-spacing: 1px;
+      line-height: 1.5;
+      word-spacing: 3px;
+    }
+
+    .wrapper {
+      padding: 20px 45px;
+      padding-top: 0;
+      margin-right: 30px;
+      margin-left: auto;
+
+      color:  $secondary ;
+      text-align: right;
+
+      border-radius: 5px;
+    }
+
+    .logo_holder {
+      display: flex;
+      align-items: center;
+
+      margin: 0 10px 0 128px;
+      width: 100%;
+      
+      img {
+        margin-right: 25px;
+      }
+    }
+  }
+}
+
+.skills {
+  padding-top: 50px;
+  padding-bottom: 50px;
+  
+  background: $secondary;
+
+  .container {
+    @extend .container__sm;
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  h3 {
+    flex: 0 0 100%;
+    margin-bottom: 60px;
+    width: 100%;
+
+    color: #fff;
+    text-align: center;
+  }
+
+  .column {
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex: 0 0 22.5%;
+    padding: 30px 20px;
+    margin: 21.5px 0;
+    width: 22.5%;
+
+    background: $primary;
+    box-shadow: 0 2px 20px rgb(0 0 0);
+  }
+
+  .skill_name {
+    margin-top: 21px;
+    
+    font-size: 32px;
+  }
+}
