@@ -1,9 +1,8 @@
 'use client'
 import styles from '../styles/footer.module.scss'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faPhone, faEnvelope } from '@fortawesome/free-solid-svg-icons';
-import { faGithub } from '@fortawesome/free-brands-svg-icons';
-
+import { faPhone, faEnvelope } from '@fortawesome/free-solid-svg-icons'
+import { faGithub, faLinkedinIn } from '@fortawesome/free-brands-svg-icons'
 export default function Footer({ layout }) {
   return (
     <div className={styles.footer}>
@@ -18,6 +17,9 @@ export default function Footer({ layout }) {
           </a>
           <a href="#" className={styles.link}>
             <FontAwesomeIcon icon={faGithub} />  
+          </a>
+          <a href="#" className={styles.link}>
+            <FontAwesomeIcon icon={faLinkedinIn} />
           </a>
         </div>
       </div>

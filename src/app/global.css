@@ -130,4 +130,6 @@ h3 {
 p {
   color: #2f2f2f;
   font-size: 20px;
+  letter-spacing: 1px;
+  line-height: 1.2;
 }
