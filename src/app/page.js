@@ -4,13 +4,15 @@ import Welcome from './layout/welcome'
 import Timeline from './layout/timeline'
 import Skills from './layout/skills'
 
-export default function Home() {
+const Home = () => {
   return (
     <main>
-      <Banner />
+      <Banner name="experience" />
       <Welcome />
       <Timeline />
       <Skills />
     </main>
   )
 }
+
+export default Home;

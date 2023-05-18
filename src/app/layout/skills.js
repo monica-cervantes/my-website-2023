@@ -13,6 +13,7 @@ import GatsbyJS from '../images/gatsby.png'
 import Wordpress from '../images/wordpress.png'
 import Git from '../images/git.png'
 import Photoshop from '../images/photoshop.png'
+import { Element, animateScroll as scroll } from 'react-scroll'
 
 const data = [
   {
@@ -77,9 +78,9 @@ const data = [
   }
 ];
 
-export default function Skills() {
+const Skills = () => {
   return (
-    <div className={styles.skills}>
+    <Element className={styles.skills} name="skills">
       <div className={styles.container}>
         <h3>SKILLS</h3>
         {data.map(skill =>
@@ -90,6 +91,8 @@ export default function Skills() {
           />
         )}
       </div>
-    </div>
+    </Element>
   )
 } 
+
+export default Skills;

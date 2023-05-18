@@ -12,7 +12,7 @@ export const metadata = {
   description: 'Front-end Web Developer',
 }
 
-export default function RootLayout({ children }) {
+const RootLayout = ({ children }) => {
   return (
     <html lang="en">
       <body className={source_sans.className}>
@@ -23,3 +23,5 @@ export default function RootLayout({ children }) {
     </html>
   )
 }
+
+export default RootLayout;

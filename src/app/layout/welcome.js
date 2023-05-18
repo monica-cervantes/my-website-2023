@@ -2,7 +2,7 @@
 import styles from '../styles/home.module.scss'
 import globalStyles from '../styles/global.module.scss'
 
-export default function Welcome() {
+const Welcome = () => {
   return (
     <section className={styles.welcome}>
       <div className={globalStyles.container__sm}>
@@ -12,3 +12,5 @@ export default function Welcome() {
     </section>
   )
 } 
+
+export default Welcome;

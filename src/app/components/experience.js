@@ -3,7 +3,7 @@ import styles from '../styles/home.module.scss'
 import Image from 'next/image'
 
 
-export default function Experience( props ) {
+const Experience = ( props ) => {
   return (
     <div className={styles.column}>
        <div className={`${styles.job} ${styles.job_details}`}>
@@ -25,3 +25,5 @@ export default function Experience( props ) {
     </div>
   )
 } 
+
+export default Experience;

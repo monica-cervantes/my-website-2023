@@ -6,6 +6,7 @@ import Rivan from '../images/rivan.png'
 import Fullstack from '../images/fullstack.png'
 import Shell from '../images/shell-logo.png'
 import ClarkOutsourcing from '../images/clark-outsourcing.png'
+import { Element, animateScroll as scroll } from 'react-scroll'
 
 const data = [
   {
@@ -42,9 +43,9 @@ const data = [
   }
 ];
 
-export default function Timeline() {
+const Timeline = () => {
   return (
-    <div className={styles.timeline}>
+    <Element className={styles.timeline} name="timeline">
       <div className={globalStyles.container__sm}>
         <div className='row-custom'>
           {data.map(experience => 
@@ -59,6 +60,8 @@ export default function Timeline() {
           )}
         </div>
       </div>
-    </div>
+    </Element>
   )
 } 
+
+export default Timeline;

@@ -3,7 +3,8 @@ import styles from '../styles/footer.module.scss'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faPhone, faEnvelope } from '@fortawesome/free-solid-svg-icons'
 import { faGithub, faLinkedinIn } from '@fortawesome/free-brands-svg-icons'
-export default function Footer({ layout }) {
+
+const Footer = ({ layout }) => {
   return (
     <div className={styles.footer}>
       <div className={styles.footer__container}>
@@ -26,3 +27,5 @@ export default function Footer({ layout }) {
     </div>
   )
 }
+
+export default Footer;

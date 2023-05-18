@@ -4,7 +4,7 @@ import profilePic from '../images/profile-pic.png'
 import styles from '../styles/home.module.scss'
 import Blob from '../components/blob'
 
-export default function Banner({ layout }) {
+const Banner = ({ layout }) => {
   return (
     <section className={styles.banner}>
       <Blob />
@@ -24,3 +24,5 @@ export default function Banner({ layout }) {
     </section>
   )
 }
+
+export default Banner;

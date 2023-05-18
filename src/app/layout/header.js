@@ -3,8 +3,9 @@ import Image from 'next/image';
 import Logo from '../images/logo.png'
 import styles from '../styles/header.module.scss'
 import globalStyles from '../styles/global.module.scss'
+import { Link, Element, animateScroll as scroll } from 'react-scroll';
 
-export default function Header({ layout }) {
+const Header = ({ layout }) => {
   return (
     <section className={styles.header}>
       <div className={globalStyles.container}>
@@ -25,10 +26,10 @@ export default function Header({ layout }) {
                 <a className={styles.header__nav_link} href="#">Home <span className={styles.header__sr_only}>(current)</span></a>
               </li>
               <li className={styles.header__nav_item}>
-                <a className={styles.header__nav_link} href="#">Experience</a>
+                <Link className={styles.header__nav_link} activeClass="active" to="timeline" spy={true} smooth={true} duration={1000}>Experience</Link>
               </li>
               <li className={styles.header__nav_item}>
-                <a className={styles.header__nav_link} href="#">Skills</a>
+                <Link className={styles.header__nav_link} activeClass="active" to="skills" spy={true} smooth={true} duration={2000}>Skills</Link>
               </li>
               <li className={styles.header__nav_item}>
                 <a className={styles.header__nav_link} href="#">Works</a>
@@ -40,3 +41,5 @@ export default function Header({ layout }) {
     </section>
   )
 }
+
+export default Header;
