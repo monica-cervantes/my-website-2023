@@ -1,4 +1,5 @@
 @import  'variables.module.scss';
+@import 'mixins.module.scss';
 
 .header {
   position: absolute;
@@ -30,6 +31,10 @@
 
   &__nav_item {
     padding: 0 15px;
+
+    &:last-child {
+      padding-right: 0;
+    }
   }
   
   &__nav_link {
@@ -48,5 +53,26 @@
 
   &__sr_only {
     display: none;
+  }
+}
+
+@include respond-to(xl-down) {
+  .header {
+    &__navbar_logo {
+      width: 100px;
+      height: auto;
+    }
+  }
+}
+
+@include respond-to(md-down) {
+  .header {
+    &__navbar_logo {
+      width: 80px;
+    }
+
+    &__nav_item {
+      padding: 0 12px;
+    }
   }
 }

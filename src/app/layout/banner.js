@@ -7,9 +7,9 @@ import Blob from '../components/blob'
 const Banner = ({ layout }) => {
   return (
     <section className={styles.banner}>
-      <Blob />
       <div className={styles.banner__container}>
-        <div className="img-wrapper">
+        <Blob />
+        <div className={styles.banner__img_wrapper}>
           <Image
             src={profilePic}
             alt="Picture of me"

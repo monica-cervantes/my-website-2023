@@ -5,11 +5,11 @@
   background: $secondary;
 
   &__container {
-    @extend .container__sm;
+    @extend .container;
 
     display: flex;
     justify-content: space-between;
-    padding: 40px 0;
+    padding: 40px 15px;
     
     color: #fff;
     font-weight: 300;
@@ -29,6 +29,16 @@
 
     &:hover {
       color: $primary;
+    }
+  }
+}
+
+@include respond-to(xl-down) {
+  .footer {
+    padding: 0 15px;
+
+    &__container {
+      margin: auto 0;
     }
   }
 }

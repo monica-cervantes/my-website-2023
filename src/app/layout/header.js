@@ -13,6 +13,7 @@ const Header = ({ layout }) => {
           <a className="navbar-brand" href="#">
             <Image 
               src={Logo}
+              className={styles.header__navbar_logo}
               alt="logo"
             />
           </a>
