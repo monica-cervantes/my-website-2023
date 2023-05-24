@@ -2,53 +2,43 @@
 @import 'mixins.module.scss';
 
 .container {
-  position: relative;
-  z-index: 5;
+  // position: relative;
+  // z-index: 5;
 
-  // padding: 0 15px;
-  margin: auto;
+  margin: auto 30px;
   max-width: 1620px;
   width: 100%;
 
   &__sm {
-    @extend .container;
-    
+    // position: relative;
+    // z-index: 5;
+
+    margin: auto;
     max-width: 1320px;
+    width: 100%;
   }
 }
 
 @include respond-to(xl-down) {
-  .container {
-    width: inherit;
-    margin: auto 30px;
-
-    &__sm {
-      max-width: 1140px;
-      margin: auto;
-    }
+  .container__sm {
+    max-width: 1140px;
   }
 }
 
 @include respond-to(lg-down) {
-  .container {
+  .container__sm {
     max-width: 960px;
-
-    &__sm {}
   }
 }
 
 @include respond-to(md-down) {
-  .container {
+  .container__sm {
     max-width: 720px;
-
-    &__sm {}
   }
 }
 
 @include respond-to(sm-down) {
-  .container {
+  .container__sm {
     max-width: 540px;
-
-    &__sm {}
   }
 }

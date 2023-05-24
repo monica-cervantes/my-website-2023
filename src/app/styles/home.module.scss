@@ -81,11 +81,11 @@
   top: -90px;
   z-index: 2;
 
+  display: flex;
+  justify-content: center;
   margin: auto;
-  // max-width: 1320px;
   
   text-align: center;
-  
   
   &__container {
     @extend .container;
@@ -531,14 +531,20 @@
 
 @include respond-to(sm-down) {
   .banner {
-    padding-top: 88px;
+    padding-top: 120px;
+
+    background: rgb(255,204,63);
+    background: linear-gradient(150deg, rgba(255,204,63,1) 33%, rgba(184,137,23,1) 66%);
 
     &__container {
       flex-direction: column;
 
       &:before {
-        left: -164px;
-        bottom: -362px;
+        left: -317px;
+        bottom: inherit;
+        top: -225px;
+        
+        transform: rotate(160deg);
       }
 
       &:after {
@@ -547,12 +553,23 @@
       }
 
       svg {
-        left: -580px;
-        top: -1024px;
+        // left: -580px;
+        // top: -1024px;
 
-        width: 1552px;
+        // width: 1552px;
         
-        transform: rotate(84deg);
+        // transform: rotate(84deg);
+
+        display: none;
+      }
+    }
+
+    &__content_wrapper {
+      margin-left: 0;
+
+      h1,
+      h2 {
+        color: $secondary;
       }
     }
   }
@@ -619,7 +636,127 @@
 }
 
 @include respond-to(xs) {
+  .banner {
+    padding-bottom: 75px;
+
+    &__img_wrapper {
+      img {
+        margin-bottom: 12px;
+        width: 280px;
+      }
+    }
+
+    &__content_wrapper {
+      h1 {
+        font-size: 17vw;
+      }
+
+      h2 {
+        font-size: 11vw;
+        font-weight: 300;
+      }
+    }
+  }
+
   .welcome {
-    
+    top: -35px;
+  }
+
+  .timeline {
+    &:before {
+      left: 28px;
+
+      height: 98%;
+
+      border: 2px solid $primary;
+    }
+
+    .column {
+      padding: 25px 15px;
+      padding-left: 60px;
+
+      &:before {
+        left: 18.5px;
+      }
+
+      &:nth-child(odd) {
+        .logo_holder {
+          margin: 0;
+
+          img {
+            margin-left: 0;
+            width: 230px;
+            height: auto;
+          }
+        }
+
+        .wrapper {
+          margin-left: 0;
+        }
+      }
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+
+      .job {
+        flex: 0 0 100%;
+      }
+
+      .job_heading {
+        font-size: 20px;
+      }
+
+      .job_summary {
+        font-size: 18px;
+        line-height: 1.2;
+      }
+
+      .position {
+        font-size: 32px;
+      }
+
+      .logo_holder {
+        margin: 0;
+
+        img {
+          margin-right: 0;
+          width: 230px;
+          height: auto;
+        }
+      }
+
+      .wrapper {
+        margin-left: 0;
+      }
+    }
+  }
+
+  .skills {
+    padding-top: 32px;
+    padding-bottom: 32px;
+
+    .container {
+      padding: 0 10px;
+    }
+
+    .column {
+      flex: 0 0 48.5%;
+      margin: 5px 0;
+      width: 48.5%;
+
+      img {
+        height: 93px;
+      }
+    }
+
+    h3 {
+      margin-bottom: 30px;
+    }
+
+    .skill_name {
+      font-size: 21px;
+      letter-spacing: 0.5px;
+    }
   }
 }
