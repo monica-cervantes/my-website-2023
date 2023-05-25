@@ -8,10 +8,10 @@ import '@fortawesome/fontawesome-svg-core/styles.css'
 import ScrollToTop from './components/scrolltotop'
 config.autoAddCss = false
 
-export const metadata = {
-  title: 'Monica Cervantes',
-  description: 'Front-end Web Developer',
-}
+// export const metadata = {
+//   title: 'Monica Cervantes',
+//   description: 'Front-end Web Developer',
+// }
 
 const RootLayout = ({ children }) => {
   return (
