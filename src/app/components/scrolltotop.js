@@ -2,8 +2,7 @@ import React from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faArrowUp } from '@fortawesome/free-solid-svg-icons'
 import styles from '../styles/global.module.scss'
-import * as Scroll from 'react-scroll'
-import { Link, Button, Element, Events, animateScroll as scroll, scrollSpy, scroller } from 'react-scroll'
+import { animateScroll as scroll } from 'react-scroll'
 
 const ScrollToTop = () => {
   const scrollToTop = () => {

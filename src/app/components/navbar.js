@@ -10,15 +10,9 @@ const Navbar = () => {
 
   const [ isMobile, setIsMobile ] = useState(false);
 
-  const [isCollapsed, setIsCollapsed] = useState(true);
-
   const toggleNavbar = () => {
     setIsExpandle(!isExpanded);
   }
-
-  // const toggleCollapse = () => {
-  //   setIsCollapsed(!isCollapsed);
-  // };
 
   useEffect(() => {
     const handleResize = () => {
@@ -63,9 +57,9 @@ const Navbar = () => {
           <li className={styles.header__nav_item}>
             <Link className={styles.header__nav_link} activeClass="active" to="skills" spy={true} smooth={true} duration={2000}>Skills</Link>
           </li>
-          <li className={styles.header__nav_item}>
+          {/* <li className={styles.header__nav_item}>
             <a className={styles.header__nav_link} href="#">Works</a>
-          </li>
+          </li> */}
         </ul>
       </div>
     </nav>

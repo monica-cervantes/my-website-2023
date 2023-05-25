@@ -2,7 +2,6 @@
 import styles from '../styles/home.module.scss'
 import Image from 'next/image'
 
-
 const Experience = ( props ) => {
   return (
     <div className={styles.column}>

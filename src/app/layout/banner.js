@@ -4,7 +4,7 @@ import profilePic from '../images/profile-pic.png'
 import styles from '../styles/home.module.scss'
 import Blob from '../components/blob'
 
-const Banner = ({ layout }) => {
+const Banner = () => {
   return (
     <section className={styles.banner}>
       <div className={styles.banner__container}>
