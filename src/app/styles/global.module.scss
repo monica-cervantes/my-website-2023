@@ -40,6 +40,11 @@
   .container__sm {
     max-width: 1140px;
   }
+
+  .scroll_to_top {
+    bottom: 83px;
+    right: 41px;
+  }
 }
 
 @include respond-to(lg-down) {
@@ -51,6 +56,11 @@
 @include respond-to(md-down) {
   .container__sm {
     max-width: 720px;
+  }
+
+  .scroll_to_top {
+    bottom: 83px;
+    right: 27px;
   }
 }
 

@@ -16,10 +16,10 @@ const Footer = ({ layout }) => {
           <a href="mailto:cervantesmonicalouise@gmail.com" className={styles.link}>
             <FontAwesomeIcon icon={faEnvelope} />  
           </a>
-          <a href="#" className={styles.link}>
+          <a href="https://github.com/monica-cervantes" className={styles.link}>
             <FontAwesomeIcon icon={faGithub} />  
           </a>
-          <a href="#" className={styles.link}>
+          <a href="https://www.linkedin.com/in/monicalouisecervantes/" className={styles.link}>
             <FontAwesomeIcon icon={faLinkedinIn} />
           </a>
         </div>
