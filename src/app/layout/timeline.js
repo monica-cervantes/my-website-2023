@@ -50,7 +50,7 @@ const Timeline = () => {
         <div className='row-custom'>
           {data.map(experience => 
             <Experience
-              id={experience.id}
+              key={experience.id}
               logo={experience.logo}
               company={experience.company}
               position={experience.position}

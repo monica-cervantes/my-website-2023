@@ -1,12 +1,15 @@
-'use client'
 import './global.css'
 import Header from './layout/header'
 import Footer from './layout/footer'
 import { source_sans } from './fonts/fonts'
 import { config } from '@fortawesome/fontawesome-svg-core'
 import '@fortawesome/fontawesome-svg-core/styles.css'
-import ScrollToTop from './components/scrolltotop'
 config.autoAddCss = false
+
+export const metadata = {
+  title: 'Home | Monica Cervantes',
+  description: 'Welcome to My Site',
+};
 
 const RootLayout = ({ children }) => {
   return (
@@ -15,7 +18,6 @@ const RootLayout = ({ children }) => {
         <Header />
           {children}
         <Footer />
-        <ScrollToTop />
       </body>
     </html>
   )

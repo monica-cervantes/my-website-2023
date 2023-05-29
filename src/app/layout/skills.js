@@ -85,7 +85,7 @@ const Skills = () => {
         <h3>SKILLS</h3>
         {data.map(skill =>
           <Skill 
-            id={skill.id}
+            key={skill.id}
             logo={skill.logo}
             name={skill.name}
           />

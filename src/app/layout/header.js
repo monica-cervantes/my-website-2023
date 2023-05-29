@@ -1,4 +1,4 @@
-'use-client'
+'use client'
 import styles from '../styles/header.module.scss'
 import globalStyles from '../styles/global.module.scss'
 import Navbar from '../components/navbar'
